@@ -1,4 +1,4 @@
-var submit = document.getElementById('login_btn');
+var submit = document.getElementById('register_btn');
     submit.onclick = function () {
         // Create a request object
         var request = new XMLHttpRequest();
@@ -39,7 +39,7 @@ var submit = document.getElementById('login_btn');
 //register start here
 
 
-var register = document.getElementById('register_btn');
+var register = document.getElementById('register_btn1');
     register.onclick = function () {
         // Create a request object
         var request = new XMLHttpRequest();

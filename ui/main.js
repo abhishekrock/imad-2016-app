@@ -1,125 +1,71 @@
 
-function loadLoginForm () {
-    var loginHtml = `
-        <h3>Login/Register to unlock awesome features</h3>
-        <input type="text" id="username" placeholder="username" />
-        <input type="password" id="password" />
-        <br/><br/>
-        <input type="submit" id="login_btn" value="Login" />
-        <input type="submit" id="register_btn" value="Register" />
-        `;
-    document.getElementById('login_area').innerHTML = loginHtml;
-    
-    // Submit username/password to login
-    var submit = document.getElementById('login_btn');
-    submit.onclick = function () {
-        // Create a request object
-        var request = new XMLHttpRequest();
-        
-        // Capture the response and store it in a variable
-        request.onreadystatechange = function () {
-          if (request.readyState === XMLHttpRequest.DONE) {
-              // Take some action
-              if (request.status === 200) {
-                  submit.value = 'Sucess!';
-              } else if (request.status === 403) {
-                  submit.value = 'Invalid credentials. Try again?';
-              } else if (request.status === 500) {
-                  alert('Something went wrong on the server');
-                  submit.value = 'Login';
-              } else {
-                  alert('Something went wrong on the server');
-                  submit.value = 'Login';
-              }
-              loadLogin();
-          }  
-          // Not done yet
-        };
-        
-        // Make the request
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-        console.log(username);
-        console.log(password);
-        request.open('POST', '/login', true);
-        request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username, password: password}));  
-        submit.value = 'Logging in...';
-        
-    };
-    
-    var register = document.getElementById('register_btn');
-    register.onclick = function () {
-        // Create a request object
-        var request = new XMLHttpRequest();
-        
-        // Capture the response and store it in a variable
-        request.onreadystatechange = function () {
-          if (request.readyState === XMLHttpRequest.DONE) {
-              // Take some action
-              if (request.status === 200) {
-                  alert('User created successfully');
-                  register.value = 'Registered!';
-              } else {
-                  alert('Could not register the user');
-                  register.value = 'Register';
-              }
-          }
-        };
-        
-        // Make the request
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-        console.log(username);
-        console.log(password);
-        request.open('POST', '/create-user', true);
-        request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username, password: password}));  
-        register.value = 'Registering...';
-    
-    };
-}
-
-function loadLoggedInUser (username) {
-    var loginArea = document.getElementById('login_area');
-    loginArea.innerHTML = `
-        <h3> Hi <i>${username}</i></h3>
-        <a href="/logout">Logout</a>
-    `;
-}
-
-function loadLogin () {
-    // Check if the user is already logged in
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function () {
-        if (request.readyState === XMLHttpRequest.DONE) {
-            if (request.status === 200) {
-                loadLoggedInUser(this.responseText);
-            } else {
-                loadLoginForm();
-            }
-        }
-    };
-    
-    request.open('GET', '/check-login', true);
-    request.send(null);
-}
-
 function loadArticles () {
         // Check if the user is already logged in
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var articles = document.getElementById('articles');
-            if (request.status === 200) {
-                var content = '<ul>';
+            if (request.status === 200) 
+            {
+                var content =`
+                        <section class="expertise-wrapper section-wrapper">
+                            <div class="container">
+                        `;
                 var articleData = JSON.parse(this.responseText);
+                
                 for (var i=0; i< articleData.length; i++) {
-                    content += `<li>
+                    /*content += `<li>
                     <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
-                    (${articleData[i].date.split('T')[0]})</li>`;
+                    (${articleData[i].date.split('T')[0]})</li>`;*/
+
+                    content+=`
+
+                 <div class="row">
+                        <div class="col-md-3">
+                            <div class="section-title">
+                                <h2>My Specialities</h2>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="row">
+                                
+                                    <div class="expertise-item">
+                                        <h3>${articleData[i].title}</h3>
+
+                                        <p>
+                                            Posted 10 minutes ago by ${articleData[i].author_id}, Contributor
+                                        </p>
+
+
+                                        <h4>
+
+                                            ${articleData[i].content}
+                                            
+                                        </h4>
+                                    </div>
+                               
+                             
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    `;
+
+
+
+
+
+
+
                 }
-                content += "</ul>"
+                content +=`
+                        </div>
+                    </section>
+                    `;
                 articles.innerHTML = content;
             } else {
                 articles.innerHTML('Oops! Could not load all articles!')
@@ -129,11 +75,62 @@ function loadArticles () {
     
     request.open('GET', '/get-articles', true);
     request.send(null);
+};
+
+
+
+function test(){
+ var content = '';
+    for (var i=0; i< 3; i++) {
+                    /*content += `<li>
+                    <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
+                    (${articleData[i].date.split('T')[0]})</li>`;*/
+
+                    content +=`
+
+                 <div class="row">
+                        <div class="col-md-3">
+                            <div class="section-title">
+                                <h2>My Specialities</h2>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="row">
+                                
+                                    <div class="expertise-item">
+                                        <h3>FBI will receive ‘limited’ Twitter firehose access through Dataminr, but has to watch its step</h3>
+
+                                        <p>
+                                            Posted 10 minutes ago by Devin Coldewey, Contributor
+                                        </p>
+
+
+                                        <h4>
+
+
+                                            TechCrunch was told that the service being provided to the FBI is different from that requested by the CIA, which was turned away before. The FBI would receive “a limited version of our breaking news alerting product” starting December 1, according to a Dataminr statement. (“Dataminr is not a product that enables surveillance,” it concluded. Not knowingly, perhaps.)
+
+                                        </h4>
+                                    </div>
+                               
+                             
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    `;
+
+                }
+ var articles = document.getElementById('articles');
+ articles.innerHTML = content;
+
 }
-
-
-// The first thing to do is to check if the user is logged in!
-loadLogin();
-
-// Now this is something that we could have directly done on the server-side using templating too!
 loadArticles();
+
+
+
+
+
+

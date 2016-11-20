@@ -23,6 +23,10 @@ var register = document.getElementById('register_btn');
         // Make the request
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        
+        
         console.log(username);
         console.log(password);
         request.open('POST', '/create-user', true);

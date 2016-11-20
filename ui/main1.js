@@ -70,3 +70,4 @@ var register = document.getElementById('register_btn');
     
     };
 
+request.open('POST', '/create-user', true);

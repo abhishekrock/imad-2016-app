@@ -90,6 +90,10 @@ function test(){
                     /*content += `<li>
                     <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
                     (${articleData[i].date.split('T')[0]})</li>`;*/
+                    
+                      var str ="echCrunch was told that the service being provided to the FBI is different from that requested by the CIA, which was turned away before. The FBI would receive “a limited version of our breaking news alerting product";
+                      
+                      var trimmedString = str.substring(0, 10);
 
                     content +=`
 
@@ -114,7 +118,7 @@ function test(){
                                         <h4>
 
 
-                                            TechCrunch was told that the service being provided to the FBI is different from that requested by the CIA, which was turned away before. The FBI would receive “a limited version of our breaking news alerting product” starting December 1, according to a Dataminr statement. (“Dataminr is not a product that enables surveillance,” it concluded. Not knowingly, perhaps.)
+                                            ${trimmedString}
 
                                         </h4>
                                     </div>

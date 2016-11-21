@@ -167,8 +167,8 @@ var prevbutton = document.getElementById('prev_btn');
     }
     
 
-var article= -3;
-var count = 0;
+var article= 1;
+var count = -3;
  
 if(article===1){
     

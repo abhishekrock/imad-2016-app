@@ -13,7 +13,7 @@ var register = document.getElementById('register_btn');
               if (request.status === 200) {
                   alert('User created successfully');
                   register.value = 'Registered!';
-                  request.redirect('/login');
+                  return request.redirect('/login');
               } else {
                   alert('Could not register the user');
                   register.value = 'Register';

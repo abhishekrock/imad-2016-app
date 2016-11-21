@@ -104,16 +104,24 @@ function createTemplate (data) {
 			
 				
 				</div>
+				
+				
+				
+				
+		<div class="container">
+			<div class="row main">
+				<div class="panel-heading">
+	               <div class="panel-title text-center">
+	               		<h1 class="title">${title}</h1>
+	               		<hr />
+	               	</div>
+	            </div> 
+				
+			</div>
+			</div>
+				
+				
 		
-          <div class="container">
-              <div>
-                  <a href="/">Home</a>
-              </div>
-              <hr/>
-              <h3>
-                  ${heading}
-              </h3>
-              <div>
                   ${date.toDateString()}
               </div>
               <div>

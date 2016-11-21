@@ -135,6 +135,17 @@ function test(){
  articles.innerHTML = content;
 
 }
+
+//next button
+
+
+var nextbutton = document.getElementById('next_btn');
+    nextbutton.onclick = function (){
+        
+        loadArticles();
+        
+    }
+
 loadArticles();
 
 test();

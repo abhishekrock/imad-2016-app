@@ -42,7 +42,7 @@ function loadArticles (count) {
                                         <p>
                             
                             
-                            Posted on ${time.toLocaleDateString()}  at ${articleData[i].author_id} by ${articleData[i].username}
+                            Posted on ${time.toLocaleDateString()}  at ${time.toLocaleTimeString()} by ${articleData[i].username}
                                          
                                         </p>
 

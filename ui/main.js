@@ -100,7 +100,7 @@ function loadLoggedInUser (username) {
 										<li><a href="/about">About</a>
 										</li>
 										
-										<li><a href="/contact">Contact</a>
+										<li><a href="/">Blog</a>
 										</li>
                                         <li class="dropdown">
 											<a class="dropdown-toggle" data-toggle="dropdown">${username} <i class="fa fa-user-o" aria-hidden="true"><b class="caret"></b></i></a>

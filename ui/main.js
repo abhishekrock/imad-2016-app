@@ -142,14 +142,14 @@ function test(){
 var nextbutton = document.getElementById('next_btn');
     nextbutton.onclick = function (){
         
-        //loadArticles();
+        loadArticles();
         
     }
     
 var article= 1;
 
 if(article===1){
-   loadArticles();
+   //loadArticles();
    article++;
 }
 

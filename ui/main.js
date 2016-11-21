@@ -89,63 +89,6 @@ function loadArticles (count) {
 }
 
 
-
-function test(){
- var content = '';
-    for (var i=0; i< 3; i++) {
-                    /*content += `<li>
-                    <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
-                    (${articleData[i].date.split('T')[0]})</li>`;*/
-                    
-                      var str ="echCrunch was told that the service being provided to the FBI is different from that requested by the CIA, which was turned away before. The FBI would receive “a limited version of our breaking news alerting product";
-                      
-                      var trimmedString = str.substring(0, 10);
-
-                    content +=`
-
-                 <div class="row">
-                        <div class="col-md-3">
-                            <div class="section-title">
-                                <h2>My Specialities</h2>
-                            </div>
-                        </div>
-
-                        <div class="col-md-8">
-                            <div class="row">
-                                
-                                    <div class="expertise-item">
-                                        <h3>FBI will receive ‘limited’ Twitter firehose access through Dataminr, but has to watch its step</h3>
-
-                                        <p>
-                                            Posted 10 minutes ago by Devin Coldewey, Contributor
-                                        </p>
-
-
-                                        <h4>
-
-
-                                            ${trimmedString}
-
-                                        </h4>
-                                    </div>
-                               
-                             
-                            </div>
-                           
-                        </div>
-                    </div>
-
-                    `;
-
-                }
- var articles = document.getElementById('articles');
- articles.innerHTML = content;
-
-}
-
-
-
-
 function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
@@ -197,60 +140,7 @@ function loadLogin () {
     request.send(null);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //next button
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 var nextbutton = document.getElementById('next_btn');
     nextbutton.onclick = function (){
@@ -275,7 +165,8 @@ var prevbutton = document.getElementById('prev_btn');
        
         
     }
- loadLogin ();   
+ 
+loadLogin ();   
 
 var article= 1;
 var count = -3;

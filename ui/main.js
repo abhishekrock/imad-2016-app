@@ -1,6 +1,9 @@
 
-function loadArticles () {
+function loadArticles (count) {
         // Check if the user is already logged in
+    
+   
+    
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -60,11 +63,6 @@ function loadArticles () {
                     `;
 
 
-
-
-
-
-
                 }
                 content +=`
                         </div>
@@ -77,8 +75,14 @@ function loadArticles () {
         }
     };
     
-    request.open('GET', '/get-articles', true);
-    request.send(null);
+    //request.open('GET', '/get-articles', true);
+    //request.send(null);
+    
+    //
+    
+        request.open('POST', '/get-articles', true);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.send(JSON.stringify({count: count}));  
 }
 
 
@@ -142,22 +146,25 @@ function test(){
 var nextbutton = document.getElementById('next_btn');
     nextbutton.onclick = function (){
         console.log("i am in next btn");
-        loadArticles();
+        loadArticles(count);
+        count+=3;
         
     }
     
-var article= 1;
 
+var article= 1;
+var count = 0;
+ 
 if(article===1){
-   loadArticles();
    
-   article++;
+   loadArticles(count);
+   
+   article++; count+=3;
    console.log(article);
 }
 
 
 test();
-
 
 
 

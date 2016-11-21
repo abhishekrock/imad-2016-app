@@ -167,9 +167,16 @@ if(article===1){
 }
 
 
-test();
+//test();
 
 
+var prevbutton = document.getElementById('prev_btn');
+    prevbutton.onclick = function (){
+        console.log("i am in prev btn");
+        loadArticles(count);
+        count-=3;
+        
+    }
 
 
 

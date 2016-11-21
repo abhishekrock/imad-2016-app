@@ -50,4 +50,4 @@ function loadLogin () {
 }
 
 
-loadlogin();
+loadLogin();

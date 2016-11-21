@@ -44,9 +44,8 @@ function loadArticles () {
                                         <h4>
 
                                                 ${trimmedString}
-
-                                        
-                                            
+                                        <a href="/articles/${articleData[i].title}"> Read More</a>
+                                       
                                         </h4>
                                     </div>
                                

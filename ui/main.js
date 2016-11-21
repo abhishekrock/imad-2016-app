@@ -149,8 +149,34 @@ function test(){
 function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
-        <h3> Hi <i>${username}</i></h3>
-        <a href="/logout">Logout</a>
+    
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+									<ul class="nav navbar-nav navbar-right">
+										
+									   
+										<li><a href="/about">About</a>
+										</li>
+										
+										<li><a href="/contact">Contact</a>
+										</li>
+                                        <li class="dropdown">
+											<a class="dropdown-toggle" data-toggle="dropdown">${username} <i class="fa fa-user-o" aria-hidden="true"><b class="caret"></b></i></a>
+											<ul class="dropdown-menu">
+												<li><a href="/blog">List of Posts</a>
+												</li>
+												<li><a href="/logout">Logout</a>
+												</li>
+											</ul>
+										</li>
+                                            
+                    
+										
+									</ul>
+								</div>
+    
+        
+        
+        
     `;
 }
 

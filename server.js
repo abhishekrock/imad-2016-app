@@ -109,6 +109,7 @@ function createTemplate (data) {
 				
 				
 		<div class="container">
+			
 			<div class="row main">
 				<div class="panel-heading">
 	               <div class="panel-title text-center">
@@ -116,8 +117,17 @@ function createTemplate (data) {
 	               		<hr />
 	               	</div>
 	            </div> 
+	           
 				
 			</div>
+			
+    			<div class="panel-title text-center">
+    	               		<h3 class="title">${content}</h3>
+    	               		<hr />
+    	               	</div>
+			
+			
+			
 			</div>
 				
 				

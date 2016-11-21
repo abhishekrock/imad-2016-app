@@ -22,7 +22,7 @@ function loadArticles (count) {
                     (${articleData[i].date.split('T')[0]})</li>`;*/
                     
                     var trimmedString = articleData[i].content.substring(0, 300);
-                    
+                    var time = new Date(articleData[i].date);
 
                     content+=`
 
@@ -40,7 +40,10 @@ function loadArticles (count) {
                                         <h3><a href="/articles/${articleData[i].title}">${articleData[i].title}</a></h3>
 
                                         <p>
-                                            Posted 10 minutes ago by ${articleData[i].author_id}, Contributor
+                            
+                            
+                            Posted on ${time.toLocaleDateString()}  at ${articleData[i].author_id} by ${articleData[i].username}
+                                         
                                         </p>
 
 

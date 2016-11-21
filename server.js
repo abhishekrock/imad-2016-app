@@ -50,6 +50,19 @@ function createTemplate (data) {
                     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
                     <link rel="stylesheet" href="/ui/css/main.css">
 					<link rel="stylesheet" href="/ui/logincss.css">
+					
+					<style>
+					
+					p {
+                        color: #576366;
+                        font-size: 19px;
+                        line-height: 1.6;
+                        margin-top: 5px;
+                        margin-bottom: 20px;
+                    }
+                    					
+					
+					</style>
                    
 
                 </head>

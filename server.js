@@ -249,6 +249,8 @@ app.post('/login', function (req, res) {
           res.status(500).send(err.toString());
       } else {
           if (result.rows.length === 0) {
+              
+              console.log("no row found");
               res.status(403).send('username/password is invalid');
           } else {
               // Match the password

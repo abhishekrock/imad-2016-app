@@ -34,7 +34,7 @@ function loadArticles () {
                             <div class="row">
                                 
                                     <div class="expertise-item">
-                                        <h3>${articleData[i].title}</h3>
+                                        <h3><a href="/articles/${articleData[i].title}">${articleData[i].title}</a></h3>
 
                                         <p>
                                             Posted 10 minutes ago by ${articleData[i].author_id}, Contributor

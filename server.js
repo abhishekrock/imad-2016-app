@@ -177,10 +177,13 @@ app.get('/logout', function (req, res) {
 
 var pool = new Pool(config);
 
-app.get('/get-articles', function (req, res) {
+app.post('/get-articles', function (req, res) {
    // make a select request
    // return a response with the results
-   pool.query('SELECT * FROM article ORDER BY date DESC', function (err, result) {
+   
+    var count = req.body.count;
+  //SELECT * FROM article ORDER BY date DESC
+   pool.query('SELECT * FROM article LIMIT 3 OFFSET $1',[count], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {

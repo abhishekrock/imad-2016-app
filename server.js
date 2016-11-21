@@ -301,7 +301,9 @@ app.post('/get-articles', function (req, res) {
    
     var count = req.body.count;
   //SELECT * FROM article ORDER BY date DESC
-   pool.query('SELECT * FROM article ORDER BY date DESC LIMIT 3 OFFSET $1',[count], function (err, result) {
+  
+  
+   pool.query('SELECT "user".username , article.title,article.content,article.date,article.category FROM "article","user" where article.author_id = "user".id ORDER BY date DESC LIMIT 3 OFFSET $1',[count], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {

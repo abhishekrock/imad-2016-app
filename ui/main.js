@@ -41,7 +41,7 @@ function loadArticles (count) {
 
                                         <p>
                             
-                            
+                        
                             Posted on ${time.toLocaleDateString()}  at ${time.toLocaleTimeString()} by ${articleData[i].username}
                                          
                                         </p>

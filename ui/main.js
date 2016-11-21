@@ -29,7 +29,7 @@ function loadArticles (count) {
                  <div class="row">
                         <div class="col-md-3">
                             <div class="section-title">
-                                <h2>My Specialities</h2>
+                                <h2>${articleData[i].category}</h2>
                             </div>
                         </div>
 

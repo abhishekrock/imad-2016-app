@@ -60,6 +60,10 @@ function createTemplate (data) {
                         margin-top: 5px;
                         margin-bottom: 20px;
                     }
+                    
+                    hr{
+                        width:70%;
+                    }
                     					
 					
 					</style>
@@ -132,28 +136,26 @@ function createTemplate (data) {
 	            </div> 
 	           
 				
-			</div>
+		    </div>
+		
+		
 				<div class="row main">
 				
 				    <div class="col-md-2">
 				    </div>
-				 <div class="col-md-8">
+				    <div class="col-md-8">
 				
-    			
     	               		<p class="title">${content}<p>
-    	               	
-    	               	
-    	               	
+    	            
+			        </div>
 			
-			</div>
+        			<div class="col-md-2">
+        				    </div>
+			    </div>
 			
-			<div class="col-md-2">
-				    </div>
-			</div>
-			
-			</div>
+		</div>
 				
-				
+			<hr>	
 		
                   ${date.toDateString()}
               </div>

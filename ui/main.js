@@ -150,8 +150,9 @@ var nextbutton = document.getElementById('next_btn');
     nextbutton.onclick = function (){
         console.log("i am in next btn");
         console.log(count);
-        loadArticles(count);
         count+=3;
+        loadArticles(count);
+        
         
     }
     
@@ -159,20 +160,22 @@ var prevbutton = document.getElementById('prev_btn');
     prevbutton.onclick = function (){
         console.log("i am in prev btn");
          console.log(count);
+          count-=3;
         loadArticles(count);
-        count-=3;
+       
         
     }
     
 
-var article= 1;
+var article= -3;
 var count = 0;
  
 if(article===1){
-   
+    
+   count+=3;
    loadArticles(count);
    
-   article++; count+=3;
+   article++; 
    //console.log(article);
 }
 

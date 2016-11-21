@@ -45,7 +45,7 @@ function loadArticles () {
 
                                                 ${trimmedString}
 
-                                            ${articleData[i].content}
+                                        
                                             
                                         </h4>
                                     </div>

@@ -139,10 +139,10 @@ function createTemplate (data) {
 				    </div>
 				 <div class="col-md-8">
 				
-    			<div class="panel-title text-center">
+    			
     	               		<p class="title">${content}<p>
-    	               		<hr />
-    	               	</div>
+    	               	
+    	               	
     	               	
 			
 			</div>

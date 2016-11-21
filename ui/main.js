@@ -154,6 +154,14 @@ var nextbutton = document.getElementById('next_btn');
         
     }
     
+var prevbutton = document.getElementById('prev_btn');
+    prevbutton.onclick = function (){
+        console.log("i am in prev btn");
+        loadArticles(count);
+        count-=3;
+        
+    }
+    
 
 var article= 1;
 var count = 0;
@@ -170,13 +178,7 @@ if(article===1){
 //test();
 
 
-var prevbutton = document.getElementById('prev_btn');
-    prevbutton.onclick = function (){
-        console.log("i am in prev btn");
-        loadArticles(count);
-        count-=3;
-        
-    }
+
 
 
 

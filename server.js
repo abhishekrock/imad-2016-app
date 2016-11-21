@@ -155,21 +155,34 @@ function createTemplate (data) {
 			
 		</div>
 				
-			<hr>	
+			<hr/>
+			
+			
+			<div class="container">
+				<div class="row main">
+				
+				    <div class="col-md-2">
+				    </div>
+				    <div class="col-md-8">
+				
+    	               	<h4>Comments</h4>
+                          <div id="comment_form">
+                          </div>
+                          <div id="comments">
+                            <center>Loading comments...</center>
+                          </div>
+                      </div>
+    	            
+			        </div>
+			
+        			<div class="col-md-2">
+        				    </div>
+			    </div>
+			    
+			 </div>
 		
-                  ${date.toDateString()}
-              </div>
-              <div>
-                ${content}
-              </div>
-              <hr/>
-              <h4>Comments</h4>
-              <div id="comment_form">
-              </div>
-              <div id="comments">
-                <center>Loading comments...</center>
-              </div>
-          </div>
+             
+              
           <script type="text/javascript" src="/ui/article.js"></script>
       </body>
     </html>

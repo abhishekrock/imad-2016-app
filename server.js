@@ -127,7 +127,7 @@ function createTemplate (data) {
 				<div class="panel-heading">
 	               <div class="panel-title text-center">
 	               		<h1 class="title">${title}</h1>
-	               		<hr />
+	               	        <p>writes on November 10, 2016</p>
 	               	</div>
 	            </div> 
 	           

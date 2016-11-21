@@ -145,8 +145,15 @@ var nextbutton = document.getElementById('next_btn');
         loadArticles();
         
     }
+    
+var article= 1;
 
-loadArticles();
+if(article===1){
+   loadArticles();
+   article++;
+}
+
+
 
 test();
 

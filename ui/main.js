@@ -141,7 +141,7 @@ function test(){
 
 var nextbutton = document.getElementById('next_btn');
     nextbutton.onclick = function (){
-        
+        console.log("i am in next btn");
         loadArticles();
         
     }
@@ -149,7 +149,7 @@ var nextbutton = document.getElementById('next_btn');
 var article= 1;
 
 if(article===1){
-   //loadArticles();
+   loadArticles();
    
    article++;
    console.log(article);

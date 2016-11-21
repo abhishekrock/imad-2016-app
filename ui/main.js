@@ -18,7 +18,7 @@ function loadArticles () {
                     <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
                     (${articleData[i].date.split('T')[0]})</li>`;*/
                     
-                    var trimmedString = articleData[i].content.substring(0, 10);
+                    var trimmedString = articleData[i].content.substring(0, 50);
                     
 
                     content+=`

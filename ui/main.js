@@ -149,6 +149,7 @@ function test(){
 var nextbutton = document.getElementById('next_btn');
     nextbutton.onclick = function (){
         console.log("i am in next btn");
+        console.log(count);
         loadArticles(count);
         count+=3;
         
@@ -157,6 +158,7 @@ var nextbutton = document.getElementById('next_btn');
 var prevbutton = document.getElementById('prev_btn');
     prevbutton.onclick = function (){
         console.log("i am in prev btn");
+         console.log(count);
         loadArticles(count);
         count-=3;
         
@@ -171,7 +173,7 @@ if(article===1){
    loadArticles(count);
    
    article++; count+=3;
-   console.log(article);
+   //console.log(article);
 }
 
 

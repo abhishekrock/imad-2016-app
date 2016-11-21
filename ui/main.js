@@ -142,7 +142,7 @@ function test(){
 var nextbutton = document.getElementById('next_btn');
     nextbutton.onclick = function (){
         
-        loadArticles();
+        //loadArticles();
         
     }
     

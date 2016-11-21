@@ -136,7 +136,7 @@ function test(){
  articles.innerHTML = content;
 
 }
-//loadArticles();
+loadArticles();
 
 test();
 

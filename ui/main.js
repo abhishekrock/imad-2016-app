@@ -150,9 +150,10 @@ var article= 1;
 
 if(article===1){
    //loadArticles();
+   
    article++;
+   console.log(article);
 }
-
 
 
 test();

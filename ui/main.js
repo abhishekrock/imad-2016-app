@@ -156,6 +156,10 @@ var nextbutton = document.getElementById('next_btn');
         
     }
     
+
+//previous button
+    
+    
 var prevbutton = document.getElementById('prev_btn');
     prevbutton.onclick = function (){
         console.log("i am in prev btn");

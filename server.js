@@ -120,13 +120,16 @@ function createTemplate (data) {
 	           
 				
 			</div>
-			
+				<div class="row main">
+				 <div class="col-md-9">
+				
     			<div class="panel-title text-center">
-    	               		<h3 class="title">${content}</h3>
+    	               		<p class="title">${content}<p>
     	               		<hr />
     	               	</div>
 			
-			
+			</div>
+			</div>
 			
 			</div>
 				

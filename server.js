@@ -29,9 +29,13 @@ app.use(session({
 
 function createTemplate (data) {
     var title = data.title;
-    var date = data.date;
+    //var date = data.date;
+    var time = new Date(data.date);
+    var newtime = calTimee(time);
+    
     var heading = data.heading;
     var content = data.content;
+    
     
     var htmlTemplate = `
         
@@ -137,7 +141,7 @@ function createTemplate (data) {
 				<div class="panel-heading">
 	               <div class="panel-title text-center">
 	               		<h1 class="title">${title}</h1>
-	               	        <p>writes on November 10, 2016</p>
+	               	        <p>writes on ${newtime}</p>
 	               	</div>
 	            </div> 
 	           

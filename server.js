@@ -105,6 +105,19 @@ function createTemplate (data) {
                    	    color:#2DACD1;
                    	    
                    	}
+                   	
+                   	.submit{
+                   	    border-radius: 5px;
+                        background: transparent;
+                        border: 2px solid #5fcf80;
+                        color: #5fcf80;
+                        padding: 10px 26px;
+                        font-size: 14px;
+                        display: inline-block;
+                        margin: 0;
+                        font-weight: 700;
+                        text-align: center;
+                   	}
 					
 					</style>
                    
@@ -208,20 +221,7 @@ function createTemplate (data) {
 			
 			</div>
 			
-			
-			
-			
-
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+		
 			
 			<div class="container">
 				<div class="row main">

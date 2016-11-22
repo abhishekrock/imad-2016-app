@@ -61,7 +61,10 @@ function createTemplate (data) {
                         margin-bottom: 20px;
                     }
                     
-                   					
+                   	hr{
+                   	
+                   	    width:100% ;
+                   	}
 					
 					</style>
                    

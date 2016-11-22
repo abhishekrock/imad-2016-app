@@ -58,7 +58,7 @@ function createTemplate (data) {
                         font-size: 19px;
                         line-height: 1.6;
                         margin-top: 5px;
-                        margin-bottom: 20px;
+                        margin-bottom: 5px;
                     }
                     
                    	hr{

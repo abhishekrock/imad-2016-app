@@ -22,6 +22,10 @@ $(function(){
 			password:{
 				required:true,
 				strongPassword: true
+			},
+			confirm:{
+			    required:true,
+			    equalTo: "#password"
 			}
 		},
 		messages:{
@@ -30,6 +34,9 @@ $(function(){
 			},
 			password:{
 				
+			},
+			confirm:{
+			    required:"Password not matched"
 			}
 		}
 

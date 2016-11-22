@@ -160,7 +160,7 @@ function createTemplate (data) {
 			
 			   <div class="row">
 				<div class="panel-heading">
-	               <div class="panel-title text-center">
+	               <div class="panel-title">
 	               		<h2 class="title">Comments and Responses</h2>
 	               	        
 	               	</div>

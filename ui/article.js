@@ -43,7 +43,7 @@ function loadCommentForm () {
 }
 
 
-function getTimee(time){
+function calTimee(time){
     var month = new Array();
         month[0] = "January";
         month[1] = "February";
@@ -59,8 +59,8 @@ function getTimee(time){
         month[11] = "December";
         
         var string = month[time.getMonth()];
-        string += " "+d.getDate();
-        string += " ,"+time.getFullYear(); 
+        //string += " "+d.getDate();
+        //string += " ,"+time.getFullYear(); 
         return string;
     
 }
@@ -115,7 +115,7 @@ function loadComments () {
                 var commentsData = JSON.parse(this.responseText);
                 for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);
-                    var newtime = getTimee(time);
+                    var newtime = calTimee(time);
                     
                     content+=`
                     

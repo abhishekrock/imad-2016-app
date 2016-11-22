@@ -54,15 +54,15 @@ function calTimee(time){
 //create template
 
 function createTemplate (data) {
-    var title = data.article.title;
+    var title = data.title;
     //var date = data.date;
     console.log(title);
-    var time = new Date(data.article.date);
+    var time = new Date(data.date);
     var newtime = calTimee(time);
      console.log(newtime);
-    var userid = data.user.id;
-     console.log(userid);
-    var content = data.article.content;
+    //var userid = dataid;
+     //console.log(userid);
+    var content = data.content;
      console.log(content);
     
     var htmlTemplate = `
@@ -170,7 +170,7 @@ function createTemplate (data) {
 	               <div class="panel-title text-center">
 	               		<h1 class="title">${title}</h1>
 	               	        <p>writes on ${newtime}</p>
-	               	        <p>by ${userid}
+	               	        <p>by Abhishek
 	               	</div>
 	            </div> 
 	           
@@ -428,7 +428,7 @@ app.get('/articles/:articleName', function (req, res) {
   //SELECT * FROM article WHERE title = $1"
  
   
-  pool.query( 'SELECT "user".username , article.title,article.content,article.date,article.category FROM "article","user" where article.author_id = "user".id and title = $1' , [req.params.articleName], function (err, result) {
+  pool.query( 'SELECT * FROM article WHERE title = $1' , [req.params.articleName], function (err, result) {
     if (err) {
         res.status(500).send(err.toString());
     } else {

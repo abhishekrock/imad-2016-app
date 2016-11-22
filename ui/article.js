@@ -78,7 +78,7 @@ function loadComments () {
                     var time = new Date(commentsData[i].timestamp);
                     
                     
-                    content=`
+                    content+=`
                     
                     <div class="row main">
 				

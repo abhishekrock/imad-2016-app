@@ -1,3 +1,28 @@
+function calTimee(time){
+    var month = new Array();
+        month[0] = "January";
+        month[1] = "February";
+        month[2] = "March";
+        month[3] = "April";
+        month[4] = "May";
+        month[5] = "June";
+        month[6] = "July";
+        month[7] = "August";
+        month[8] = "September";
+        month[9] = "October";
+        month[10] = "November";
+        month[11] = "December";
+        
+        var string = month[time.getMonth()];
+        string += " "+time.getDate();
+        //console.log(string);
+        string += ", "+time.getFullYear();
+        //console.log(string);
+        return string;
+    
+}
+
+
 
 function loadArticles (count) {
         // Check if the user is already logged in
@@ -23,6 +48,8 @@ function loadArticles (count) {
                     
                     var trimmedString = articleData[i].content.substring(0, 300);
                     var time = new Date(articleData[i].date);
+                    
+                    var newtime = calTimee(time);
 
                     content+=`
 
@@ -42,7 +69,7 @@ function loadArticles (count) {
                                         <p>
                             
                         
-                            Posted on ${time.toLocaleDateString()}  at ${time.toLocaleTimeString()} by ${articleData[i].username}
+                            Posted on ${newtime}  at ${time.toLocaleTimeString()} by ${articleData[i].username}
                                          
                                         </p>
 
@@ -87,6 +114,8 @@ function loadArticles (count) {
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({count: count}));  
 }
+
+
 
 
 function loadLoggedInUser (username) {

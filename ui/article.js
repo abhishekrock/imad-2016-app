@@ -90,7 +90,7 @@ function loadComments () {
 				                    
 				                  <hr>
 				
-    	               				<p>	<b> ${commentsData[i].username} </b>${time.toLocaleTimeString()} on ${time.toLocaleDateString()} said:<p>
+    	               				<p >	<b class="username"> ${commentsData[i].username} </b>${time.toLocaleTimeString()} on ${time.toLocaleDateString()} said:<p>
 
                                     ${escapeHTML(commentsData[i].comment)}
                                     

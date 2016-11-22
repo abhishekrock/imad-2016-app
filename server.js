@@ -293,8 +293,7 @@ app.post('/login', function (req, res) {
                 // { auth: {userId }}
                 
                 res.send('credentials correct!');
-                //for redirection
-               res.redirect('/');
+                //for redirectio
                 
               } else {
                 res.status(403).send('username/password is invalid');

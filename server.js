@@ -106,7 +106,7 @@ function createTemplate (data) {
                    	    
                    	}
                    	
-                   	.submit{
+                   	#submit,textarea{
                    	    border-radius: 5px;
                         background: transparent;
                         border: 2px solid #5fcf80;

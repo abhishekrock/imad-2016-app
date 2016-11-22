@@ -68,6 +68,11 @@ function createTemplate (data) {
                    	
                    	    width:100% ;
                    	}
+                   	
+                   	.username{
+                   	    color:#2DACD1;
+                   	    
+                   	}
 					
 					</style>
                    

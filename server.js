@@ -232,6 +232,7 @@ function createTemplate (data) {
 				
     	               	<h2>Leave a Reply</h2>
                           <div id="comment_form">
+                            <center>Please login to comment </center>
                           </div>
                           
                       </div>

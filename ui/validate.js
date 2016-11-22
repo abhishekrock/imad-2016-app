@@ -13,7 +13,7 @@ $(function(){
 
 
 
-	$('#register').validate({
+	$('#register_form').validate({
 		rules:{ 
 			email:{
 				required:true,

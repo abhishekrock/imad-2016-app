@@ -54,15 +54,16 @@ function calTimee(time){
 //create template
 
 function createTemplate (data) {
-    var title = data.title;
+    var title = data.article.title;
     //var date = data.date;
     console.log(title);
-    var time = new Date(data.date);
+    var time = new Date(data.article.date);
     var newtime = calTimee(time);
-    
-    var heading = data.heading;
-    var content = data.content;
-    
+     console.log(newtime);
+    var userid = data.user.id;
+     console.log(userid);
+    var content = data.article.content;
+     console.log(content);
     
     var htmlTemplate = `
         
@@ -169,7 +170,7 @@ function createTemplate (data) {
 	               <div class="panel-title text-center">
 	               		<h1 class="title">${title}</h1>
 	               	        <p>writes on ${newtime}</p>
-	               	        <p>by ${}
+	               	        <p>by ${userid}
 	               	</div>
 	            </div> 
 	           

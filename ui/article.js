@@ -60,7 +60,7 @@ function loadLogin () {
 function escapeHTML (text)
 {
     var $text = document.createTextNode(text);
-    var $div = document.createElement('div');
+    var $div = document.createElement('p');
     $div.appendChild($text);
     return $div.innerHTML;
 }
@@ -70,18 +70,43 @@ function loadComments () {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
-            var comments = document.getElementById('comments');
+            var comments = document.getElementById('comments1');
             if (request.status === 200) {
                 var content = '';
                 var commentsData = JSON.parse(this.responseText);
                 for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);
-                    content += `<div class="comment">
-                        <p>${escapeHTML(commentsData[i].comment)}</p>
-                        <div class="commenter">
-                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
-                        </div>
-                    </div>`;
+                    
+                    
+                    content=`
+                    
+                    <div class="row main">
+				
+				    <div class="col-md-2">
+				    </div>
+				    <div class="col-md-8">
+				    
+		
+				                    
+				                  <hr>
+				
+    	               				<p>	<b> ${commentsData[i].username} </b>${time.toLocaleTimeString()} on ${time.toLocaleDateString()} said:<p>
+
+                                    ${escapeHTML(commentsData[i].comment)}
+                                    
+                                    <hr>
+    	                    
+			           </div>
+			
+            			<div class="col-md-2">
+            		    </div>
+			      </div>     
+                   `; 
+                    
+                 
+                    
+                    
+            
                 }
                 comments.innerHTML = content;
             } else {

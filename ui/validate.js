@@ -33,7 +33,7 @@ $(function(){
 		},
 		messages:{
 			email:{
-				required:"Please enter valid email address"
+				required:"</div>Please enter valid email address"
 			},
 			password:{
 				

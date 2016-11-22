@@ -158,16 +158,7 @@ function createTemplate (data) {
 			
 			<div class="container">
 			
-			   <div class="row">
-				<div class="panel-heading">
-	               <div class="panel-title">
-	               		<h2 class="title">Comments and Responses</h2>
-	               	        
-	               	</div>
-	            </div> 
-	           
-				
-		    </div>
+	
 		
 		
 				<div class="row main">
@@ -175,6 +166,8 @@ function createTemplate (data) {
 				    <div class="col-md-2">
 				    </div>
 				    <div class="col-md-8">
+				    
+				            <h2>Comments and Responses</h2>
 				                    
 				                  <hr>
 				

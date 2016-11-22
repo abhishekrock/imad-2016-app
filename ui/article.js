@@ -61,8 +61,10 @@ function calTimee(time){
         var string = month[time.getMonth()];
         
         console.log(string);
-        //string += " "+d.getDate();
-        //string += " ,"+time.getFullYear(); 
+        string += " "+d.getDate();
+        console.log(string);
+        string += " ,"+time.getFullYear();
+        console.log(string);
         return string;
     
 }

@@ -115,7 +115,7 @@ function loadComments () {
                 var commentsData = JSON.parse(this.responseText);
                 for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);
-                    vat newtime = getTimee(time);
+                    var newtime = getTimee(time);
                     
                     content+=`
                     

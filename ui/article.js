@@ -67,6 +67,27 @@ function escapeHTML (text)
 
 function loadComments () {
         // Check if the user is already logged in
+        
+        
+        var month = new Array();
+        month[0] = "January";
+        month[1] = "February";
+        month[2] = "March";
+        month[3] = "April";
+        month[4] = "May";
+        month[5] = "June";
+        month[6] = "July";
+        month[7] = "August";
+        month[8] = "September";
+        month[9] = "October";
+        month[10] = "November";
+        month[11] = "December";
+        
+        
+        
+        
+        
+        
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -105,7 +126,7 @@ function loadComments () {
 				                    
 				                  <hr>
 				
-    	               				<p >	<b class="username"> ${commentsData[i].username} </b>${time.toLocaleTimeString()} on ${time.toLocaleDateString()} said:<p> ${time.getMonth()}
+    	               				<p >	<b class="username"> ${commentsData[i].username} </b>${time.toLocaleTimeString()} on ${time.toLocaleDateString()} said:<p> ${month[time.getMonth()]}
 
                                     ${escapeHTML(commentsData[i].comment)}
                                     

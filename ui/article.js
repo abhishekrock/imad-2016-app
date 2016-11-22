@@ -105,7 +105,7 @@ function loadComments () {
 				                    
 				                  <hr>
 				
-    	               				<p >	<b class="username"> ${commentsData[i].username} </b>${time.toLocaleTimeString()} on ${time.toLocaleDateString()} said:<p>
+    	               				<p >	<b class="username"> ${commentsData[i].username} </b>${time.toLocaleTimeString()} on ${time.toLocaleDateString()} said:<p> time.getMonth()
 
                                     ${escapeHTML(commentsData[i].comment)}
                                     

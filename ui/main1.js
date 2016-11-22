@@ -40,7 +40,7 @@ var submit = document.getElementById('login_btn');
 
 
 function loadLoggedInUser (username) {
-    var loginArea = document.getElementById('login_area');
+    var loginArea = document.getElementById('login_area1');
     loginArea.innerHTML = `
         <h3> Hi <i>${username}</i></h3>
         <a href="/logout">Logout</a>

@@ -59,6 +59,8 @@ function calTimee(time){
         month[11] = "December";
         
         var string = month[time.getMonth()];
+        
+        console.log(string);
         //string += " "+d.getDate();
         //string += " ,"+time.getFullYear(); 
         return string;

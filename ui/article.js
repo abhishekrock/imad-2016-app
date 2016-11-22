@@ -43,7 +43,7 @@ function loadCommentForm () {
 }
 
 
-function getTime(time){
+function getTimee(time){
     var month = new Array();
         month[0] = "January";
         month[1] = "February";
@@ -115,7 +115,7 @@ function loadComments () {
                 var commentsData = JSON.parse(this.responseText);
                 for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);
-                    vat newtime = getTime(time);
+                    vat newtime = getTimee(time);
                     
                     content+=`
                     

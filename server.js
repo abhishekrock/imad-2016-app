@@ -162,7 +162,7 @@ function createTemplate (data) {
 				<div class="panel-heading">
 	               <div class="panel-title text-center">
 	               		<h2 class="title">Comments and Responses</h2>
-	               	        
+	               	        <hr/>
 	               	</div>
 	            </div> 
 	           
@@ -176,12 +176,12 @@ function createTemplate (data) {
 				    </div>
 				    <div class="col-md-8">
 				                    
-				                    <hr>
+				                  
 				
     	               				<p>	<b> Dmytro </b>on November 2, 2016 at 12:00 pm said:<p>
 
-                                    <p>Great and clear look on abstraction! Thanks Chris!</p>
-    	                    <hr>
+                                    <p>Great and clear look on abstraction! Thanks Chris!Smart technology continues to streamline and transform nearly all aspects of our lives — monitoring our sleep patterns, allowing us to work from anywhere at any time and even helping to find cures for diseases like Zika. But more than optimizing tedious workflows or gamifying daily activities, smart technology has helped to increase our baselines and has made us better innovators and enactors of change. Besides providing the opportunity to go beyond old performance barriers, it’s opened up an entirely new way to experience the world around us. Consider how technology is being used in the world of professional sports. Sensors and wearables connected to the clo</p>
+    	                    
 			        </div>
 			
         			<div class="col-md-2">
@@ -190,7 +190,7 @@ function createTemplate (data) {
 			
 			
 			
-			
+			  <hr>
 			
 			</div>
 			

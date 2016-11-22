@@ -148,10 +148,10 @@ function createTemplate (data) {
 			        </div>
 			
         			<div class="col-md-2">
-        				    </div>
+        		    </div>
 			    </div>
 			
-		</div>
+		   </div>
 				
 			<hr/>
 			
@@ -170,11 +170,11 @@ function createTemplate (data) {
                             <center>Loading comments...</center>
                           </div>
                       </div>
-    	            
+        	            <div class="col-md-2">
+            				</div>
 			        </div>
 			
-        			<div class="col-md-2">
-        				    </div>
+        			
 			    </div>
 			    
 			 </div>

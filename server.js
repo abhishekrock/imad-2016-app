@@ -157,6 +157,59 @@ function createTemplate (data) {
 			
 			
 			<div class="container">
+			
+			   <div class="row">
+				<div class="panel-heading">
+	               <div class="panel-title text-center">
+	               		<h2 class="title">Comments and Responses</h2>
+	               	        
+	               	</div>
+	            </div> 
+	           
+				
+		    </div>
+		
+		
+				<div class="row main">
+				
+				    <div class="col-md-2">
+				    </div>
+				    <div class="col-md-8">
+				                    
+				                    <hr>
+				
+    	               				<p>	<b> Dmytro </b>on November 2, 2016 at 12:00 pm said:<p>
+
+                                    <p>Great and clear look on abstraction! Thanks Chris!</p>
+    	                    <hr>
+			        </div>
+			
+        			<div class="col-md-2">
+        		    </div>
+			    </div>
+			
+			
+			
+			
+			
+			</div>
+			
+			
+			
+			
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<div class="container">
 				<div class="row main">
 				
 				    <div class="col-md-2">

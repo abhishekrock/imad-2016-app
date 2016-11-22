@@ -63,7 +63,7 @@ function calTimee(time){
         console.log(string);
         string += " "+time.getDate();
         console.log(string);
-        string += " ,"+time.getFullYear();
+        string += ", "+time.getFullYear();
         console.log(string);
         return string;
     

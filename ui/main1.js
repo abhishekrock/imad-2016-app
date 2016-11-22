@@ -98,4 +98,4 @@ var register = document.getElementById('register_btn');
     
     };
     
-    loadLogin();
+  //  loadLogin();

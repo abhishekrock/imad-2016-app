@@ -61,6 +61,9 @@ function createTemplate (data) {
                         margin-bottom: 5px;
                     }
                     
+                    .main{
+                        margin-top:50px;
+                    }
                    	hr{
                    	
                    	    width:100% ;

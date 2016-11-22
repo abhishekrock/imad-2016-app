@@ -72,7 +72,22 @@ function loadComments () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var comments = document.getElementById('comments1');
             if (request.status === 200) {
-                var content = '';
+                var content = `
+                
+                     <div class="row">
+				
+				    <div class="col-md-2">
+				    </div>
+				    <div class="col-md-8">
+				            <h2>Comments and Responses</h2>
+			           </div>
+			
+            			<div class="col-md-2">
+            		    </div>
+			      </div> 
+                
+                
+                `;
                 var commentsData = JSON.parse(this.responseText);
                 for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);

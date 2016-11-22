@@ -230,12 +230,10 @@ function createTemplate (data) {
 				    </div>
 				    <div class="col-md-8">
 				
-    	               	<h4>Comments</h4>
+    	               	<h2>Leave a Reply</h2>
                           <div id="comment_form">
                           </div>
-                          <div id="comments">
-                            <center>Loading comments...</center>
-                          </div>
+                          
                       </div>
         	            <div class="col-md-2">
             				</div>
@@ -254,17 +252,6 @@ function createTemplate (data) {
     `;
     return htmlTemplate;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

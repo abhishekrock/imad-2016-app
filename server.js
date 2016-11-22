@@ -168,6 +168,7 @@ function createTemplate (data) {
 	               <div class="panel-title text-center">
 	               		<h1 class="title">${title}</h1>
 	               	        <p>writes on ${newtime}</p>
+	               	        <p>by ${}
 	               	</div>
 	            </div> 
 	           
@@ -422,7 +423,10 @@ app.post('/submit-comment/:articleName', function (req, res) {
 
 app.get('/articles/:articleName', function (req, res) {
   // SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
-  pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function (err, result) {
+  //SELECT * FROM article WHERE title = $1"
+ 
+  
+  pool.query( 'SELECT "user".username , article.title,article.content,article.date,article.category FROM "article","user" where article.author_id = "user".id and title = $1' , [req.params.articleName], function (err, result) {
     if (err) {
         res.status(500).send(err.toString());
     } else {

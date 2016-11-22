@@ -18,7 +18,7 @@ var submit = document.getElementById('login_btn');
                   alert('Something went wrong on the server');
                   submit.value = 'Login';
               }
-              loadLogin();
+              //loadLogin();
           }  
           // Not done yet
         };
@@ -97,3 +97,5 @@ var register = document.getElementById('register_btn');
         register.value = 'Registering...';
     
     };
+    
+    loadLogin();

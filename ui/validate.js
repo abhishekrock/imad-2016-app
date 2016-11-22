@@ -14,8 +14,7 @@ $(function(){
 
 
 	$('#register_form').validate({
-	    errorElement: 'span',
-        errorClass: 'help-inline',
+	   
 	
 		rules:{ 
 			email:{

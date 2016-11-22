@@ -94,7 +94,7 @@ function loadComments () {
 
                                     ${escapeHTML(commentsData[i].comment)}
                                     
-                                    <hr>
+                                    
     	                    
 			           </div>
 			

@@ -42,6 +42,29 @@ function loadCommentForm () {
     };
 }
 
+
+function getTime(time){
+    var month = new Array();
+        month[0] = "January";
+        month[1] = "February";
+        month[2] = "March";
+        month[3] = "April";
+        month[4] = "May";
+        month[5] = "June";
+        month[6] = "July";
+        month[7] = "August";
+        month[8] = "September";
+        month[9] = "October";
+        month[10] = "November";
+        month[11] = "December";
+        
+        var string = month[time.getMonth()];
+        string += " "+d.getDate();
+        string += " ,"+time.getFullYear(); 
+        return string;
+    
+}
+
 function loadLogin () {
     // Check if the user is already logged in
     var request = new XMLHttpRequest();
@@ -68,26 +91,6 @@ function escapeHTML (text)
 function loadComments () {
         // Check if the user is already logged in
         
-        
-        var month = new Array();
-        month[0] = "January";
-        month[1] = "February";
-        month[2] = "March";
-        month[3] = "April";
-        month[4] = "May";
-        month[5] = "June";
-        month[6] = "July";
-        month[7] = "August";
-        month[8] = "September";
-        month[9] = "October";
-        month[10] = "November";
-        month[11] = "December";
-        
-        
-        
-        
-        
-        
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -112,7 +115,7 @@ function loadComments () {
                 var commentsData = JSON.parse(this.responseText);
                 for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);
-                    
+                    vat newtime = getTime(time);
                     
                     content+=`
                     
@@ -126,7 +129,7 @@ function loadComments () {
 				                    
 				                  <hr>
 				
-    	               				<p >	<b class="username"> ${commentsData[i].username} </b>${time.toLocaleTimeString()} on ${time.toLocaleDateString()} said:<p> ${month[time.getMonth()]}
+    	               				<p >	<b class="username"> ${commentsData[i].username} </b>${time.toLocaleTimeString()} on ${time.toLocaleDateString()} said:<p> ${newtime}
 
                                     ${escapeHTML(commentsData[i].comment)}
                                     

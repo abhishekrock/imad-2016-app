@@ -56,6 +56,7 @@ function calTimee(time){
 function createTemplate (data) {
     var title = data.title;
     //var date = data.date;
+    console.log(title);
     var time = new Date(data.date);
     var newtime = calTimee(time);
     

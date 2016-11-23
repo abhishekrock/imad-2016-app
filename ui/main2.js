@@ -1,6 +1,4 @@
 //register start here
-
-
 var register = document.getElementById('register_btn');
     register.onclick = function () {
         // Create a request object
@@ -13,7 +11,6 @@ var register = document.getElementById('register_btn');
               if (request.status === 200) {
                   alert('User created successfully');
                   register.value = 'Registered!';
-                  //return request.redirect('/login');
               } else {
                   alert('Could not register the user');
                   register.value = 'Register';
@@ -24,15 +21,13 @@ var register = document.getElementById('register_btn');
         // Make the request
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        
-        
         console.log(username);
         console.log(password);
         request.open('POST', '/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username, password: password , name:name, email:email}));  
+        request.send(JSON.stringify({username: username, password: password}));  
         register.value = 'Registering...';
     
     };
+}
+
